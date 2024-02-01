@@ -1,5 +1,7 @@
 # BS23-StarCoderProjectDotNetCore<br>
 
+I couldn't complete all the project requirements because I lack professional experience as a dotnet core developer. <br> Additionally, I have limited knowledge on several topics, including clean code practices and formal coding patterns.<br> This has led to some irregularities in the code and documentation. <br>Despite my limited knowledge, I've made an effort to learn and apply what I know to the best of my ability in this project.
+
 **Setup Instructions:**<br>
 
 **Change Database Connection String:**<br>
