@@ -5,15 +5,15 @@
 **Change Database Connection String:**<br>
 Navigate to the Data folder in your project and locate the ApplicationDbContext.cs file.<br> Inside this file, find the OnConfiguring method and update the connection string with the appropriate values for your MySQL database.
 
-protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-{
-     optionsBuilder.UseMySql("your_connection_string_here");
-}
+protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)<br>
+{<br>
+     optionsBuilder.UseMySql("your_connection_string_here");<br>
+}<br>
 
 **Generate Migrations:**<br>
 Open the Package Manager Console in Visual Studio. Run the following commands to create and apply migrations:
 
-Add-Migration InitialMigration
+Add-Migration InitialMigration<br>
 Update-Database
 
 This will apply the initial migration to set up your database.
@@ -32,132 +32,133 @@ Endpoint: POST /api/Auth/Register
 Request:
 
 Content-Type: application/json
+
 Body: UserRegistrationModel
 
-{
-  "UserName": "string",
-  "Password": "string",
-  "Email": "string"
-}
+{<br>
+  "UserName": "string",<br>
+  "Password": "string",<br>
+  "Email": "string"<br>
+}<br>
 Response:
 
-Status Code: 200 OK
-Body:
+Status Code: 200 OK<br>
+Body:<br>
 
-{
-  "Username": "string",
-  "Message": "Congrats! You have been Successfully Registered"
-}
-Login User
-Logs in an existing user.
+{<br>
+  "Username": "string",<br>
+  "Message": "Congrats! You have been Successfully Registered"<br>
+}<br>
+Login User<br>
+Logs in an existing user.<br>
 
-Endpoint: POST /api/Auth/Login
+Endpoint: POST /api/Auth/Login<br>
 
-Request:
+Request:<br>
 
-Content-Type: application/json
-Body: UserLoginModel
+Content-Type: application/json<br>
+Body: UserLoginModel<br>
 
-{
-  "Username": "string",
-  "Password": "string"
-}
-Response:
+{<br>
+  "Username": "string",<br>
+  "Password": "string"<br>
+}<br>
+Response:<br>
 
-Status Code: 200 OK
-Body:
+Status Code: 200 OK<br>
+Body:<br>
 
-{
-  "token": "string",
-  "Username": "string"
-}
-TaskController
-Create Task
-Creates a new task.
+{<br>
+  "token": "string",<br>
+  "Username": "string"<br>
+}<br>
+TaskController<br>
+Create Task<br>
+Creates a new task.<br>
 
-Endpoint: POST /api/Task/Tasks
+Endpoint: POST /api/Task/Tasks<br>
 
-Authorization: Bearer Token Required
+Authorization: Bearer Token Required<br>
 
-Request:
+Request:<br>
 
-Content-Type: application/json
-Body: TaskCreateModel
+Content-Type: application/json<br>
+Body: TaskCreateModel<br>
 
-{
-  "TaskName": "string",
-  "Description": "string",
-  "DueDate": "datetime"
-}
-Response:
+{<br>
+  "TaskName": "string",<br>
+  "Description": "string",<br>
+  "DueDate": "datetime"<br>
+}<br>
+Response:<br>
 
-Status Code: 200 OK
-Body:
+Status Code: 200 OK<br>
+Body:<br>
 
-{
-  "message": "Data created successfully"
-}
-Get All Tasks
-Gets all tasks.
+{<br>
+  "message": "Data created successfully"<br>
+}<br>
+Get All Tasks<br>
+Gets all tasks.<br>
 
-Endpoint: GET /api/Task/AllTasks
-Authorization: Bearer Token with Admin Role Required
-Response:
-Status Code: 200 OK
-Body: List of TaskRetrieveModel
-Get User Tasks
-Gets tasks specific to the authenticated user.
+Endpoint: GET /api/Task/AllTasks<br>
+Authorization: Bearer Token with Admin Role Required<br>
+Response:<br>
+Status Code: 200 OK<br>
+Body: List of TaskRetrieveModel<br>
+Get User Tasks<br>
+Gets tasks specific to the authenticated user.<br>
 
-Endpoint: GET /api/Task/Tasks
-Authorization: Bearer Token Required
-Response:
-Status Code: 200 OK
-Body: List of TaskRetrieveModel
-Update Task
-Updates an existing task.
+Endpoint: GET /api/Task/Tasks<br>
+Authorization: Bearer Token Required<br>
+Response:<br>
+Status Code: 200 OK<br>
+Body: List of TaskRetrieveModel<br>
+Update Task<br>
+Updates an existing task.<br>
 
-Endpoint: PUT /api/Task/Tasks?id={task-id}
+Endpoint: PUT /api/Task/Tasks?id={task-id}<br>
 
-Authorization: Bearer Token Required
+Authorization: Bearer Token Required<br>
 
-Request:
+Request:<br>
 
-Content-Type: application/json
-Body: TaskCreateModel
+Content-Type: application/json<br>
+Body: TaskCreateModel<br>
 
-{
-  "TaskName": "string",
-  "Description": "string",
-  "DueDate": "datetime"
-}
-Response:
+{<br>
+  "TaskName": "string",<br>
+  "Description": "string",<br>
+  "DueDate": "datetime"<br>
+}<br>
+Response:<br>
 
-Status Code: 200 OK
-Body:
+Status Code: 200 OK<br>
+Body:<br>
 
-{
-  "Message": "Successfully Updated"
-}
-Delete Task
-Deletes an existing task.
+{<br>
+  "Message": "Successfully Updated"<br>
+}<br>
+Delete Task<br>
+Deletes an existing task.<br>
 
-Endpoint: DELETE /api/Task/Tasks?id={task-id}
+Endpoint: DELETE /api/Task/Tasks?id={task-id}<br>
 
-Authorization: Bearer Token Required
+Authorization: Bearer Token Required<br>
 
-Response:
+Response:<br>
 
-Status Code: 200 OK
-Body:
+Status Code: 200 OK<br>
+Body:<br>
 
-{
-  "Message": "Successfully Deleted"
-}
-WeatherForecastController
-Get Weather Forecast
-Gets a weather forecast.
+{<br>
+  "Message": "Successfully Deleted"<br>
+}<br>
+WeatherForecastController<br>
+Get Weather Forecast<br>
+Gets a weather forecast.<br>
 
-Endpoint: GET /WeatherForecast/GetWeatherForecast
-Response:
-Status Code: 200 OK
-Body: List of WeatherForecast
+Endpoint: GET /WeatherForecast/GetWeatherForecast<br>
+Response:<br>
+Status Code: 200 OK<br>
+Body: List of WeatherForecast<br>
